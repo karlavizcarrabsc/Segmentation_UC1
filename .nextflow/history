@@ -6,3 +6,7 @@
 2025-06-26 10:56:13	4.3s	mad_morse	ERR	17f75be415bf9cbdf5a31332e9899327	0c0f073e-2cad-4e73-b49f-71db800a836e	nextflow run main.nf -profile docker -c parameters_file.config --participant_id tool1
 2025-06-26 10:56:37	3.8s	special_baekeland	ERR	17f75be415bf9cbdf5a31332e9899327	d8b7926c-2406-4cc9-8bfa-201ab53fac90	nextflow run main.nf -profile docker -c parameters_file.config --participant_id tool1
 2025-06-26 11:00:25	5.9s	reverent_allen	ERR	17f75be415bf9cbdf5a31332e9899327	212a87f1-12ed-40e1-b79e-a1deaf91186a	nextflow run main.nf -profile docker -c parameters_file.config --participant_id tool1
+2025-09-25 14:00:18	1m 7s	determined_bartik	ERR	17f75be415bf9cbdf5a31332e9899327	4f0d7cb3-eb75-45fc-abd5-b4f20a135e16	nextflow run main.nf -profile docker -c parameters_file.config
+2025-09-25 14:31:05	2.3s	focused_bassi	ERR	17f75be415bf9cbdf5a31332e9899327	98ff0112-7410-4e3d-ae6a-970863e9728e	nextflow run main.nf -profile docker -c parameters_file.config
+2025-09-25 14:32:51	1m 3s	grave_northcutt	ERR	17f75be415bf9cbdf5a31332e9899327	c5bd082a-3c22-412b-99b3-5481742cc9da	nextflow run main.nf -profile docker -c parameters_file.config
+2025-09-25 14:43:28	1m 1s	lethal_neumann	OK	17f75be415bf9cbdf5a31332e9899327	b0fd55d7-c73f-4813-ae2c-ff7316a3e912	nextflow run main.nf -profile docker -c parameters_file.config
