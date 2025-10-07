@@ -227,7 +227,8 @@ def compute_metrics(input_file, goldstandard_dir, challenge, participant_id,
         # object_id = base_id + f"{metric_name}_label1"
         assessment_object = JSON_templates.write_assessment_dataset(
             object_id, community, challenge, participant_id,
-            f"{metric_name}_label1", stats['mean'], stats['std'])
+            f"{metric_name}", stats['mean'], stats['std'])
+            # f"{metric_name}_label1", stats['mean'], stats['std'])
         all_assessments.append(assessment_object)
 
     # Write all assessments to JSON file
