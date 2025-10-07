@@ -223,7 +223,8 @@ def compute_metrics(input_file, goldstandard_dir, challenge, participant_id,
 
     # Create assessment objects for each metric
     for metric_name, stats in metrics_summary.items():
-        object_id = base_id + f"{metric_name}_label1"
+        object_id = base_id + f"{metric_name}"
+        # object_id = base_id + f"{metric_name}_label1"
         assessment_object = JSON_templates.write_assessment_dataset(
             object_id, community, challenge, participant_id,
             f"{metric_name}_label1", stats['mean'], stats['std'])
