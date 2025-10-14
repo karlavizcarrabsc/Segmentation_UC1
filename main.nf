@@ -86,6 +86,7 @@ consolidated_result = file(params.consolidated_result)
 //otherdir = file(params.otherdir, type: 'dir')
 
 // Process definitions
+default_validation_filename = "validated_result.json"
 
 process validation {
 
@@ -95,14 +96,14 @@ process validation {
 	publishDir outdir,
 	mode: 'copy',
 	overwrite: false,
-    saveAs: { filename -> "validated_result.json" }
+    saveAs: { filename -> default_validation_filename }
 
     // Publish validation_result copy in OEB VRE only
 	publishDir validation_result.parent,
 	mode: 'copy',
 	overwrite: false,
     saveAs: { filename -> 
-		def DEFAULT_VALIDATION_RESULT = "${params.outdir}/validated_result.json"
+		def DEFAULT_VALIDATION_RESULT = "${params.outdir}/${default_validation_filename}"
         // Convert both paths to absolute paths for comparison
 		def fullValidationResultPath = validation_result.toString()
         def fullDefaultValidationResultPath = DEFAULT_VALIDATION_RESULT.toString()
@@ -120,7 +121,7 @@ process validation {
 	path goldstandard_dir
 	
 	output:
-    path "validated_result.json", emit: validation_file
+    path "${validation_result}", emit: validation_file
 	val task.exitStatus, emit: validation_status
 			
 	"""
