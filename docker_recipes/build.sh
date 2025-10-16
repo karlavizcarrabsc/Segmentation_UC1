@@ -7,7 +7,7 @@ if [ $? -ne 0 ] ; then
 	exit 1
 fi
 
-COMMUNITY_LABEL=eucanimage
+COMMUNITY_LABEL=eucanimage_seg
 
 if [ $# -gt 0 ]; then
 	tag_id="$1"
