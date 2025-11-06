@@ -168,6 +168,8 @@ process compute_metrics {
 	validation_status == 0
 
 	"""
+	OPENBLAS_NUM_THREADS=1
+	export OPENBLAS_NUM_THREADS
 	python3 /app/compute_metrics.py -i $input_file -c $challenges_ids -e $event_id -g $goldstandard_dir -p $participant_id -com $community_id -o "${default_assessment_filename}"
 	
 	"""
